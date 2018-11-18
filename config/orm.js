@@ -2,10 +2,10 @@
 const connection = require('./connection');
 
 const orm = {
-    selectAll();
-    insertOne();
-    updateOne();
-}
+    selectAll,
+    insertOne,
+    updateOne,
+};
 
-// Export the orm object for the model.
+// Export the orm object for the model. (sushi.js)
 module.exports = orm;
