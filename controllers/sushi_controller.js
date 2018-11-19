@@ -33,13 +33,13 @@ router.put('/api/sushi/:id', function (req, res) {
     console.log(id);
     console.log(req.body);
 
-    /*sushi.updateOne({mindfully_eaten: req.body.mindfully_eaten}, id, function (result) {
+    sushi.updateOne({mindfully_eaten: req.body.mindfully_eaten}, id, function (result) {
         if (result.changedRows === 0) {
             return res.status(404).end()
         } else {
             res.status(200).end()
         }
-    });*/
+    });
 });
 
 // DELETE route to remove a sushi from the database.

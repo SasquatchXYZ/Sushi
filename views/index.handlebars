@@ -13,9 +13,9 @@
         <div class="column1">
             <ul>
                 {{#each sushi}}
-                    {{#unless mindfully_eaten}}
+                    {{#if mindfully_eaten}}
                         {{> sushi-block mindfully_eaten=false}}
-                    {{/unless}}
+                    {{/if}}
                 {{/each}}
             </ul>
         </div>

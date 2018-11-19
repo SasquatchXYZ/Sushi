@@ -1,7 +1,7 @@
 <li>
     {{this.sushi_name}}
     <button class="enjoy" data-id="{{this.id}}" data-newme="{{mindfully_eaten}}">
-        {{#if sleep}}Enjoy{{else}}Reorder{{/if}}
+        {{#if mindfully_eaten}}Enjoy{{else}}Reorder{{/if}}
     </button>
 
     <button class="delete-sushi" data-id="{{this.id}}">X</button>
