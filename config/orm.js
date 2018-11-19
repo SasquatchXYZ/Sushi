@@ -5,27 +5,36 @@ const connection = require('./connection');
 const orm = {
 
     // Query to retrieve all of the sushi information in the database.
-    selectAll: function(cb) {
+    selectAll: function (cb) {
         const queryAll = 'SELECT * FROM sushi';
-        connection.query(queryAll, function(err, results) {
+        connection.query(queryAll, function (err, results) {
             if (err) throw err;
             cb(results);
         });
     },
 
     // Query to insert a new sushi into the database, it receives the name of the sushi from the model.
-    insertOne: function(cols, num, cb) {
-        const insertQuery = `INSERT INTO sushi (${cols.toString()}) VALUES (${questionMarks(num)})`;
-        connection.query(insertQuery, function(err, result) {
+    insertOne: function (cols, values, cb) {
+        const insertQuery = `INSERT INTO sushi (${cols.toString()}) VALUES (${questionMarks(values.length)})`;
+        connection.query(insertQuery, values, function (err, result) {
             if (err) throw err;
             cb(result)
         });
     },
 
     // Function to update
-    updateOne: function(updateSushiObj, id, cb) {
+    updateOne: function (updateSushiObj, id, cb) {
         const updateQuery = `UPDATE sushi SET ${colToEqual(updateSushiObj)} WHERE ${id}`;
-        connection.query(updateQuery, function(err, result) {
+        connection.query(updateQuery, function (err, result) {
+            if (err) throw err;
+            cb(result)
+        });
+    },
+
+    // Function to delete a sushi type from the menu.
+    deleteOne: function (id, cb) {
+        const deleteQuery = `DELETE FROM sushi WHERE ${id}`;
+        connection.query(deleteQuery, function (err, result) {
             if (err) throw err;
             cb(result)
         });
