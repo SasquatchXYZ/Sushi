@@ -1,6 +1,6 @@
 USE sushi_db;
 
-INSERT INTO sushi (sushi_name, mindfully_ate)
+INSERT INTO sushi (sushi_name, mindfully_eaten)
 VALUES ('Ankimo', 0),
        ('Uni', 0),
        ('Unagi', 0),
