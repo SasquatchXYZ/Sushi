@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="column1">
+        <ul>
+            {{#each sushi}}
+                {{#unless mindfully_eaten}}
+                    {{> sushi-block mindfully_eaten=true}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+    <div class="column2"></div>
+    <div class="column3">
+        <div class="column1">
+            <ul>
+                {{#each sushi}}
+                    {{#unless mindfully_eaten}}
+                        {{> sushi-block mindfully_eaten=false}}
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h2>Add Sushi</h2>
+
+<form id="add-sushi">
+    <div class="form-group">
+        <label for="add-sushi-name">Sushi Name:</label>
+        <input type="text" id="add-sushi-name" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="me">Have you eaten this yet?</label>
+        <input type="radio" name="me" value="0" checked>Not Yet<br>
+        <input type="radio" name="me" value="1">Yes
+    </div>
+
+    <button type="submit">Add Sushi</button>
+</form>

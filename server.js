@@ -1,6 +1,6 @@
 // Require express module
 const express = require('express');
-
+const bodyParser = require('body-parser');
 
 // Establish the express app and the PORT.
 const app = express();
@@ -12,8 +12,8 @@ app.use(express.static('public'));
 
 
 // Parse the application body.
-app.use(express.urlencoded({extended: true}));
-app.use(express.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 
 // Enable Express Handlebars for Templating the HTML.
