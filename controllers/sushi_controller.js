@@ -14,27 +14,27 @@ router.get('/', function (req, res) {
         const hbsObject = {
             sushi: data
         };
-        console.log(hbsObject);
-        res.render('index', hbsObject);
+        //console.log(hbsObject);
+        res.status(200)
+            .render('index', hbsObject);
     });
 });
 
 // POST route to add a new sushi to the database and page.
 router.post('/api/sushi', function (req, res) {
-    console.log(req.body);
+
     sushi.insertOne(
         ['sushi_name', 'mindfully_eaten'],
         [req.body.sushi_name, req.body.mindfully_eaten],
-        function(result) {
-        res.json({id: result.insertId});
-    });
+        function (result) {
+            res.status(200)
+                .json({id: result.insertId});
+        });
 });
 
 // PUT route to update the status from not eaten to eaten and vice versa.
 router.put('/api/sushi/:id', function (req, res) {
     const id = `id = ${req.params.id}`;
-    console.log(id);
-    console.log(req.body);
 
     sushi.updateOne({mindfully_eaten: req.body.mindfully_eaten}, id, function (result) {
         if (result.changedRows === 0) {
@@ -47,9 +47,9 @@ router.put('/api/sushi/:id', function (req, res) {
 
 // DELETE route to remove a sushi from the database.
 router.delete('/api/sushi/:id', function (req, res) {
-    console.log(req.params.id);
+    const id = `id = ${req.params.id}`;
 
-    sushi.deleteOne(req.params.id, function (result) {
+    sushi.deleteOne(id, function (result) {
         if (result.affectedRows === 0) {
             return res.status(404).end()
         } else {
