@@ -1,0 +1,17 @@
+.enjoy {
+    font-size: 70%;
+    background: green;
+}
+
+.reorder {
+    font-size: 70%;
+    background: teal;
+}
+
+.button-xsmall {
+    font-size: 70%;
+}
+
+.button-error {
+    background: red;
+}

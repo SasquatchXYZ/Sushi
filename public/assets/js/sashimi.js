@@ -1,7 +1,7 @@
 $(function () {
 
     // Enjoy Button (when you eat/reorder the sushi) Click Event Handler
-    $('.enjoy').on('click', function (event) {
+    $('.shift').on('click', function (event) {
         const id = $(this).data('id');
         console.log(id);
         const newME = $(this).data('newme');
