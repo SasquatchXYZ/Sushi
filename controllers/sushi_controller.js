@@ -15,8 +15,7 @@ router.get('/', function (req, res) {
             sushi: data
         };
         //console.log(hbsObject);
-        res.status(200)
-            .render('index', hbsObject);
+        res.render('index', hbsObject);
     });
 });
 
