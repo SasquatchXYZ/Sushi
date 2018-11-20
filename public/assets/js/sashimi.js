@@ -28,7 +28,7 @@ $(function () {
 
         const newSushi = {
             sushi_name: $('#add-sushi-name').val().trim(),
-            mindfully_eaten: $('[name=me]:checked').val().trim()
+            mindfully_eaten: $('[name=m-e]:checked').val().trim()
         };
 
         console.log(newSushi)
