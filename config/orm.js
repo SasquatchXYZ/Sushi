@@ -16,10 +16,11 @@ const orm = {
     // Query to insert a new sushi into the database, it receives the name of the sushi from the model.
     insertOne: function (cols, values, cb) {
         const insertQuery = `INSERT INTO sushi (${cols.toString()}) VALUES (${questionMarks(values.length)})`;
-        connection.query(insertQuery, values, function (err, result) {
+        console.log(insertQuery)
+        /*connection.query(insertQuery, values, function (err, result) {
             if (err) throw err;
             cb(result)
-        });
+        });*/
     },
 
     // Function to update

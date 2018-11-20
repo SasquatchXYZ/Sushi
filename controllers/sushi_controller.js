@@ -22,9 +22,12 @@ router.get('/', function (req, res) {
 // POST route to add a new sushi to the database and page.
 router.post('/api/sushi', function (req, res) {
     console.log(req.body);
-    /*sushi.insertOne([],[], function(result) {
+    sushi.insertOne(
+        ['sushi_name', 'mindfully_eaten'],
+        [req.body.sushi_name, req.body.mindfully_eaten],
+        function(result) {
         res.json({id: result.insertId});
-    });*/
+    });
 });
 
 // PUT route to update the status from not eaten to eaten and vice versa.
