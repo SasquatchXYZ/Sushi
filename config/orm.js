@@ -48,7 +48,6 @@ const orm = {
 // for use by the MySQL query.
 function questionMarks(num) {
     let marks = [];
-    console.log(num);
     for (let k = 0; k < num; k++) {
         marks.push('?')
     }
