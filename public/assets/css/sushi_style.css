@@ -7,11 +7,6 @@ html, body, header, .view {
     height: 100%;
 }
 
-/*.shift, .delete-sushi {
-    float: right;
-    margin-left: 5px;
-}*/
-
 .delete-sushi {
     border: none;
     border-radius: 50%;
