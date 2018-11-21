@@ -3,15 +3,36 @@ html, body, header, .view {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background: url("../img/avocado.jpg") no-repeat center center fixed;
+    background: url("../img/blur.jpg") no-repeat center center fixed;
     height: 100%;
 }
 
-.shift, .delete-sushi {
+/*.shift, .delete-sushi {
     float: right;
     margin-left: 5px;
-}
+}*/
 
 .delete-sushi {
     border: none;
+    border-radius: 50%;
+}
+
+.list-group-flush {
+    padding: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.list-group-item {
+    background-color: transparent;
+}
+
+.card {
+    border-color: white;
 }
