@@ -19,7 +19,7 @@ router.get('/', function (req, res) {
     });
 });
 
-// POST route to add a new sushi to the database and page.
+// POST route to add a new sushi to the database and page, it passes the name and the eaten status to the model.
 router.post('/api/sushi', function (req, res) {
 
     sushi.insertOne(
@@ -31,7 +31,8 @@ router.post('/api/sushi', function (req, res) {
         });
 });
 
-// PUT route to update the status from not eaten to eaten and vice versa.
+// PUT route to update the status from not eaten to eaten and vice versa,
+// it passes the eaten status and the ID on to the model.
 router.put('/api/sushi/:id', function (req, res) {
     const id = `id = ${req.params.id}`;
 
@@ -44,7 +45,7 @@ router.put('/api/sushi/:id', function (req, res) {
     });
 });
 
-// DELETE route to remove a sushi from the database.
+// DELETE route to remove a sushi from the database, it passes the ID of the deleted sushi to the model.
 router.delete('/api/sushi/:id', function (req, res) {
     const id = `id = ${req.params.id}`;
 

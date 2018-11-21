@@ -18,14 +18,15 @@ const sushi = {
         });
     },
 
-    // Function to update a sushi type from not eaten to eaten and vice versa.
+    // Function to update a sushi type from not eaten to eaten and vice versa.  It passes an object containing the
+    // new eaten status and the ID on to the ORM.
     updateOne: function (updateSushiObj, id, cb) {
         orm.updateOne(updateSushiObj, id, cb, function (res) {
             cb(res)
         });
     },
 
-    // Function to remove a sushi type from the menu/log.
+    // Function to remove a sushi type from the menu/log, it passes the ID of the one to delete to the ORM.
     deleteOne: function (id, cb) {
         orm.deleteOne(id, cb, function (res) {
             cb(res)
