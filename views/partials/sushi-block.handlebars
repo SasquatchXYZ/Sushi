@@ -1,9 +1,9 @@
-<li>
+<li class="list-group-item">
     {{this.sushi_name}}
-    <button type="button" class="delete-sushi uk-button uk-button-small uk-button-text" data-id="{{this.id}}" uk-close></button>
-    <button class="shift uk-button uk-button-small {{#if
-            mindfully_eaten}}uk-button-default{{else}}uk-button-primary{{/if}}"
+    <button class="shift btn btn-sm {{#if
+            mindfully_eaten}}btn-outline-warning{{else}}btn-outline-info{{/if}}"
             data-id="{{this.id}}" data-newme="{{mindfully_eaten}}">
         {{#if mindfully_eaten}}Enjoy{{else}}Reorder{{/if}}
     </button>
+    <button type="button" class="delete-sushi btn btn-outline-danger btn-sm" data-id="{{this.id}}"><i class="fas fa-times"></i></button>
 </li>
