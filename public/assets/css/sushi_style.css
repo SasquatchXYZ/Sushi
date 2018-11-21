@@ -1,12 +1,9 @@
-.delete-sushi, .shift {
-    float: right;
-    margin-left: 5px;
+html, body, header, .view {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background: url("../img/avocado.jpg") no-repeat center center fixed;
+    height: 100%;
 }
 
-/*.uk-container {
-    width: 100%;
-}*/
-
-h1 {
-    color: white;
-}
