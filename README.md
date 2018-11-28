@@ -3,6 +3,8 @@
 
 Sushi is a remake of the 'Burger' web app with improved functionality.  I was a little underwhelmed by the Burger and since it isn't my favorite food, I decided to add a little to it and spice things up a big with more wasabi.  I added the ability to delete sushi items from the list if they are ones that you do not like, as well as reorder the items that you do.  It uses a MySQL database to store the sushi information, Node & Express to run the server and application, with Handlebars as the templating engine.  This version was made using Bootstrap, but I have another working with UIkit I am working on.  
 
+![Screenshot](public/assets/img/sushiscreenshot.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.  See deployment for notes on how to deploy the project on a live system.
@@ -56,7 +58,9 @@ That is really all there is to starting the application running, after that it i
 
 ## Deployment
 
-Notes to come...
+* [Deployed Site](https://.com/)
+
+I personally have this application deployed using Heroku, with the JawsDB serving to link my database to the application.  More notes and info on this to come...
 
 ## Built With
 
