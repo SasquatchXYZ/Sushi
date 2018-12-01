@@ -14,7 +14,7 @@ router.get('/', function (req, res) {
         const hbsObject = {
             sushi: data
         };
-        //console.log(hbsObject);
+       // console.log(hbsObject);
         res.render('index', hbsObject);
     });
 });
